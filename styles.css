@@ -1,0 +1,947 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111010;
+}
+
+/* header */
+
+.material-icons {
+    color: wheat;
+}
+
+h5 {
+    font-weight: 400;
+    color: wheat;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 15px;
+    background-color: black;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+}
+
+    .header__left img {
+        width: 130px;
+        margin-left: 15px;
+    }
+
+.header i {
+    padding: 0 7px;
+    cursor: pointer;
+}
+
+.header__search form {
+    border: 1px solid #ddd;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-radius: 20px;
+    border-width: 3px;
+}
+
+.header__search input {
+    width: 500px;
+    padding: 10px;
+    margin: 0;
+    border-color: black;
+    border: none;
+    height: 100%;
+    background-color: black;
+    color: aqua;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.header__search button {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+
+    .header__search button:hover {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        border: none;
+        border-radius: 20px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        background-color: blue;
+    }
+
+/* Sidebar */
+.mainBody {
+    height: calc(100vh - 70px);
+    display: flex;
+    overflow: hidden;
+}
+
+.sidebar {
+    height: 100%;
+    width: 230px;
+    background-color: black;
+    overflow-y: scroll;
+}
+
+.sidebar__categories {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.sidebar__category {
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+}
+
+    .sidebar__category span {
+        margin-left: 15px;
+    }
+
+    .sidebar__category:hover {
+        background: #e5e5e5;
+        cursor: pointer;
+    }
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+hr {
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+}
+
+
+
+/* videos */
+
+.videos {
+    background-color: black;
+    width: 90%;
+    height: 100%;
+    padding: 15px 15px;
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+    margin: auto;
+}
+
+.videos__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+
+}
+
+.video {
+    width: 336px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+    .video:hover .video__thumbnail {
+        opacity: 0.8;
+        transition: color 15s ease-in;
+    }
+
+    .video:hover strong[data-color="13+"] {
+        opacity: 0;
+    }
+
+    .video:hover strong[data-color="17+"] {
+        opacity: 0;
+    }
+
+    .video:hover strong[data-color="DUB"] {
+        opacity: 0;
+    }
+
+    .video:hover strong[data-color="SUB"] {
+        opacity: 0;
+    }
+
+    .video:hover strong[data-color="HD"] {
+        opacity: 0;
+    }
+
+    .video:hover strong[data-color="Shounen"] {
+        opacity: 0;
+    }
+
+    .video:hover strong[data-color="Seinen"] {
+        opacity: 0;
+    }
+
+    .video:hover strong[data-color="languages"] {
+        opacity: 0;
+    }
+
+
+.video__thumbnail {
+    width: 100%;
+    height: 188px;
+    position: relative;
+}
+
+    .video__thumbnail img {
+        object-fit: fill;
+        height: 100%;
+        width: 100%;
+        border-radius: 1%;
+    }
+
+    .video__thumbnail .episodes {
+        position: absolute;
+        top: 92.1%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 3px;
+        font-size: 5px;
+    }
+
+    .video__thumbnail .imagerest2 {
+        position: absolute;
+        top: 9%;
+        left: 22%;
+        transform: translate(-50%, -50%);
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    .video__thumbnail .imagerest3 {
+        position: absolute;
+        top: 10%;
+        left: 24.2%;
+        transform: translate(-50%, -50%);
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    .video__thumbnail .imagerest {
+        position: absolute;
+        top: 92.5%;
+        left: 92.6%;
+        transform: translate(-50%, -50%);
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    .video__thumbnail .imagerestshounen {
+        position: absolute;
+        top: 91.1%;
+        left: 11%;
+        transform: translate(-50%, -50%);
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    .video__thumbnail .imagerestseinen {
+        position: absolute;
+        top: 91.1%;
+        left: 9%;
+        transform: translate(-50%, -50%);
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    .video__thumbnail title {
+        max-width: 400px;
+        background-color: gray;
+    }
+
+.author img {
+    object-fit: contain;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.video__details {
+    display: flex;
+    margin-top: 10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+
+
+.container {
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 0 20px;
+
+    color: white;
+}
+
+.article2 {
+    margin-bottom: 40px;
+}
+
+.title2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: blue;
+}
+
+.title3 {
+    font-size: 16px;
+    font-style: oblique;
+    margin-bottom: 10px;
+    color: white;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.meta {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.content {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.image {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.center-align {
+    text-align: center;
+}
+
+
+
+
+.sidecont .videos__container .recosi{
+    overflow: auto;
+    border: 2px solid aqua;
+    width: 313px;
+    background-color: #181616;
+}
+
+.sidecont .videos__container .recosi h2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.sidecont .videos__container .video{
+    float: right;
+    padding: 3px 3px 3px 3px;
+}
+
+
+
+
+.title h3{
+    display: flex;
+    flex-direction: column;
+    color: blue;
+}
+
+    .title h3 {
+        color: white;
+        line-height: 19px;
+        letter-spacing: 1px;
+        font-style: oblique;
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+.video:hover .title h3 {
+    color: red;
+    line-height: 19px;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+
+.title a,
+span {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(3, 3, 3);
+}
+
+@media (max-width: 425px) {
+    .header__search {
+        display: none;
+    }
+
+    .header__icons .material-icons {
+        display: none;
+    }
+
+    .header__icons .display-this {
+        display: inline;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__search {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .show-sidebar {
+        display: inline;
+        position: fixed;
+        top: 4.4rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 771px) {
+    .videos {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        padding: 15px 15px;
+        border-top: 1px solid #ddd;
+        overflow-y: scroll;
+        margin: auto;
+    }
+}
+
+@media (max-width: 941px) {
+    .header__search input {
+        width: 300px;
+    }
+}
+
+.sitenames {
+    text-align: left;
+    font-size: 10px;
+}
+
+span[data-color] {
+    text-shadow: 2px 2px #000000;
+}
+
+span[data-color="AnimeTv"] {
+    color: blue;
+}
+
+span[data-color="MyKadri"] {
+    color: red;
+}
+
+span[data-color="Animeb"] {
+    color: #FFF547;
+}
+
+span[data-color="Konogima"] {
+    color: purple;
+}
+
+span[data-color="CrocoNet"] {
+    color: #4641be;
+}
+
+span[data-color="Tokyo"] {
+    color: darkred;
+}
+
+span[data-color="MondoStudio"] {
+    color: darkblue;
+}
+
+.popular h1 {
+    color: white;
+}
+
+.intro{
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 3px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+
+.imagerest {
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.imagerestright {
+    text-align: right;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+.imagerest2 {
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+strong[data-color="eps"] {
+    color: white;
+    border-radius: 5px;
+}
+
+strong[data-color="18+"] {
+    color: black;
+    background-color: red;
+    padding: 3px 3px 3px 3px;
+    border-radius: 5px;
+}
+
+strong[data-color="star"] {
+    color: white;
+    border-radius: 5px;
+    padding: 0px 0px 3px;
+    justify-content: center;
+}
+
+
+
+strong[data-color="ON"] {
+    color: black;
+    background-color: yellow;
+    padding: 3px 3px 3px 3px;
+    border-radius: 5px;
+}
+
+
+
+strong[data-color="NEWS"] {
+    color: black;
+    background-color: green;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 2px solid black;
+
+}
+
+strong[data-color="ANN"] {
+    color: black;
+    background-color: blue;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 2px solid black;
+}
+
+
+
+strong[data-color="SUB"] {
+    color: black;
+    background-color: green;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+strong[data-color="HD"] {
+    color: black;
+    background-color: blue;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+strong[data-color="13+"] {
+    color: black;
+    background-color: limegreen;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+strong[data-color="17+"] {
+    color: black;
+    background-color: orangered;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+
+strong[data-color="anime"] {
+    color: black;
+    background-color: orangered;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    font-size: 13px;
+    border: 2px solid black;
+}
+
+strong[data-color="Shounen"] {
+    color: black;
+    background-color: blue;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    font-size: 13px;
+    border: 2px solid black;
+}
+
+strong[data-color="Seinen"] {
+    color: black;
+    background-color: red;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    font-size: 13px;
+    border: 2px solid black;
+}
+
+
+strong[data-color="languages"] {
+    color: black;
+    background-color: green;
+    padding: 2px 2px 2px 2px;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+strong[data-color="duration"] {
+    color: white;
+    font-size: 13px;
+}
+
+
+
+/* Dropdown styles */
+
+.dropdown {
+    max-width: 13em;
+    position: relative;
+    width: 100%;
+    padding-bottom: 15px;
+    z-index: 2;
+}
+
+    .dropdown span {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+.dropdown-btn {
+    background: #1d1f24;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7em 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: transform ease-in-out 0.3s;
+}
+
+.dropdown-content {
+    list-style: none;
+    position: absolute;
+    top: 3.2em;
+    width: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+    .dropdown-content li {
+        background: #2f3238;
+        border-radius: 0.5em;
+        position: relative;
+        left: 100%;
+        transition: 0.5s;
+        transition-delay: calc(60ms * var(--delay));
+    }
+
+.dropdown:focus-within .dropdown-content li {
+    left: 0;
+}
+
+.dropdown:focus-within .dropdown-content {
+    visibility: visible;
+}
+
+.dropdown:focus-within .dropdown-btn > .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-content li:hover {
+    background: #1d1f24;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 0.7em 0.5em;
+    color: #fff;
+    margin: 0.1em 0;
+    text-decoration: none;
+}
+
+
+
+div.scrollmenu {
+    background-color: black;
+    overflow: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+}
+
+    div.scrollmenu a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 8px;
+        text-decoration: none;
+        background-color: #232323;
+        border-radius: 5px;
+    }
+
+        div.scrollmenu a:hover {
+            background-color: #777;
+        }
+
+div.scrollanime {
+    overflow: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+}
+
+    div.scrollanime .video {
+        display: inline-block;
+    }
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: greenyellow;
+    border-radius: 5px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: green;
+    }
+
+
+
+
+
+
+    :root{
+        --primary : linear-gradient(to bottom right, red, blue);
+        --secondary : gold;
+        --text: white;
+    }
+
+    .container {
+        width: 100vw;
+
+        display: grid;
+        grid-template-columns: 1.8fr 1.2fr;
+        gap: 1rem;
+
+        padding: .5rem 1rem;
+        text-transform: capitalize;
+    }
+
+    @media screen and (max-width: 990px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .main-video, .video-playlist {
+        width: 100%;
+        height: 30rem;
+    }
+
+    .main-video .animetitle {
+        margin-top: 1rem;
+        color: white;
+    }
+
+        .video-playlist .animetitle {
+            padding-left: 1rem;
+            color: white;
+        }
+
+        .video-playlist > p {
+            padding: 1rem;
+            color: orangered;
+        }
+
+        .video-playlist .animevideos {
+            height: 73%;
+            overflow-y: auto;
+        }
+
+        .video-playlist .animevideos::-webkit-scrollbar {
+            width: .5rem;
+        }
+
+            .video-playlist .animevideos::-webkit-scrollbar-thumb {
+                width: .5rem;
+                background-color: darkviolet;
+            }
+
+
+        .video-playlist .animevideos .animevideo {
+            position: relative;
+            width: 100%;
+            height: 4rem;
+            background-color: pink;
+            color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 0 1rem;
+            margin-top: .1rem;
+            cursor: pointer;
+    
+            border-radius: .5rem;
+        }
+
+
+            .video-playlist .animevideos .animevideo:hover {
+                background-color: darkslategray;
+            }
+
+            .video-playlist .animevideos .animevideo.active {
+                background-color: darkslategray;
+                color: black;
+            }
+
+
+    .main-video video {
+        width: 100%;
+        border-radius: .5rem;
+    }
+
+    .animevideo img {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+
+    .animevideo h3 {
+        width: 23rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        font: 100 1rem sans-serif;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
